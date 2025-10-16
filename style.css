@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    font-style: normal;
+    src: url('assets/fonts/Orbitron/static/Orbitron-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    src: url('assets/fonts/Roboto_Mono/static/RobotoMono-Regular.ttf');
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.clock-container {
+    text-align: center;
+    width: 100%;
+}
+
+.time {
+    font-size: 15vw;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.date {
+    font-size: 4vw;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.timezone {
+    font-size: 2vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.colon {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0.3;
+    }
+}
+
+/* Breakpoints Media Queries */
+@media (max-width: 768px) {
+    .time {
+        font-size: 18vw;
+    }
+
+    .date {
+        font-size: 6vw;
+    }
+
+    .timezone {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .time {
+        font-size: 22vw;
+    }
+
+    .date {
+        font-size: 7vw;
+    }
+
+    .timezone {
+        font-size: 5vw;
+    }
+}
